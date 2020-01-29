@@ -1,0 +1,9 @@
+
+<%=  @training.name %>
+<br>
+<%=  @training.start_date.strftime("%I:%M") %> - <%=  @training.end_date.strftime("%I:%M") %>
+<br>
+<%=  @training.group %>
+<br>
+
+<%= link_to 'Edit a training', edit_training_path %>

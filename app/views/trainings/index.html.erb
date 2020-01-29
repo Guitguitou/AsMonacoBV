@@ -1,0 +1,18 @@
+
+
+<% @trainings.each do |training| %>
+<%= link_to training_path(training) do%>
+  <div class="card-product">
+    <img src="https://cdn.static01.nicematin.com/media/npo/mobile_1440w/2016/07/33593473.jpg" />
+    <div class="card-product-infos">
+      <h2><%= training.name %></h2>
+      <p> <%= training.start_date %> </p>
+      <p> <%= training.end_date %> </p>
+      <p> <%= training.group %> </p>
+    </div>
+  </div>
+  <% end %>
+<% end %>
+
+
+<%= link_to "Créer un entrainement", new_training_path %>

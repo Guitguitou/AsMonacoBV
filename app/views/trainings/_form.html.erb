@@ -1,0 +1,10 @@
+<h2>Créer un créneau d'entrainement</h2>
+<div class="container">
+<%= simple_form_for @training do |f|  %>
+    <%= f.input :name, label: "Nom du créneau", placeholder: 'Entrainement ou Jeu libre ou tournoi' %>
+    <%= f.input :start_date, label: "Date de début du créneau" %>
+    <%= f.input :end_date, label: "Date de fin du créneau" %>
+    <%= f.input :group, label: "Groupe", placeholder: 'Élite, 1M, 2F, 3 Mixte, 4 Mixte, Tous' %>
+    <%= f.button :submit, class: "btn btn-ghost" %>
+<% end %>
+</div>
