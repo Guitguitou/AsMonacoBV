@@ -4,6 +4,7 @@ class TrainingsController < ApplicationController
   end
 
   def show
+    @booking = Booking.new
     @training = Training.find(params[:id])
   end
 
@@ -35,7 +36,7 @@ class TrainingsController < ApplicationController
 
   def destroy
     @training = Training.find(params[:id])
-    @restaurant.destroy
+    @training.destroy
   end
 
   private
