@@ -1,4 +1,4 @@
-
+<div class="container text-center">
 <%=  @training.name %>
 <br>
 <%=  @training.start_date.strftime("%I:%M") %> - <%=  @training.end_date.strftime("%I:%M") %>
@@ -6,4 +6,21 @@
 <%=  @training.group %>
 <br>
 
+
+ <% if !current_user.trainings.where(id: @training).any?  %>
+  <%= simple_form_for [@training, @booking], url: training_bookings_url(@training) do |f| %>
+    <%= f.button :submit, "Book", class: "btn btn-success" %>
+  <% end %>
+  <% else %>
+
+  <% end %>
+<br>
+ <p>Liste des inscrits</p>
+ <% @training.bookings.each do |booking| %>
+
+<%= booking.user.email %> <br>
+
+<% end %>
+<br><br>
+ </div>
 <%= link_to 'Edit a training', edit_training_path %>
