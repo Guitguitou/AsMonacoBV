@@ -4,7 +4,13 @@
     <%= f.input :name, label: "Nom du créneau", placeholder: 'Entrainement ou Jeu libre ou tournoi' %>
     <%= f.input :start_date, label: "Date de début du créneau" %>
     <%= f.input :end_date, label: "Date de fin du créneau" %>
-    <%= f.input :group, label: "Groupe", placeholder: 'Élite, 1M, 2F, 3 Mixte, 4 Mixte, Tous' %>
+<br>
+    <%= f.label :group, value: "Groupe" %>
+    <%= f.select :group, ["Elite", "Groupe 1", "Groupe 2", "Groupe 3", "Groupe 4", "Groupe 5", "Coupe de France", "M20", "M17", "M15", "M13", "Baby-volley"], placeholder: 'Groupe' %>
+<br>
+    <%= f.label :sex, value: "Sexe" %>
+    <%= f.select :sex, ["Masculin", "Féminin", "Mixte"] , prompt: 'Sélectionner'%>
+
     <%= f.button :submit, class: "btn btn-ghost" %>
 <% end %>
 </div>

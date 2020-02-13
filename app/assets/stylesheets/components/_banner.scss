@@ -1,34 +1,38 @@
 #banner-homepage{
   .banner {
+    position: relative;
     text-align: center;
-    background-image: url("https://images.unsplash.com/photo-1530869685324-333806073961?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80");
-    background: -webkit-linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3));
-    background: -o-linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3));
+    background-image: url("terrainbeach.jpg");
+    background: -webkit-linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4));
+    background: -o-linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4));
     background-size: cover;
-    height: calc(100vh - 70px);
+    height: calc(100vh - 200px);
     background-position: center;
     display: flex;
     padding: 120px 0;
     align-items: center;
     justify-content: center;
-
   }
-
   .banner h1 {
+    position: absolute;
+    bottom: 30px;
+    left: 20px;
     font-size: 50px;
     font-weight: bold;
     text-shadow: 1px 1px 2px grey;
     font-family: "Montserrat";
-    color: #FF3600;
+    color: #FFFFFF;
     opacity: 0.8;
   }
   .banner p {
+    position: absolute;
+    bottom: 0px;
+    left: 20px;
     font-size: 20px;
     font-weight: lighter;
     font-family: "Montserrat";
-    color: #FF3600;
+    color: #FFFFFF;
     opacity: 0.8;
-    margin-bottom: 30px;
     text-shadow: 1px 1px 2px grey;
   }
 

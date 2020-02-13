@@ -1,5 +1,5 @@
 class TrainingsController < ApplicationController
-    def index
+  def index
     @trainings = Training.all
   end
 
@@ -42,6 +42,6 @@ class TrainingsController < ApplicationController
   private
 
   def training_params
-    params.require(:training).permit(:name, :start_date, :end_date, :group)
+    params.require(:training).permit(:name, :start_date, :end_date, :group, :sex)
   end
 end
