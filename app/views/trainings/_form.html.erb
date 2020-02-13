@@ -11,6 +11,8 @@
     <%= f.label :sex, value: "Sexe" %>
     <%= f.select :sex, ["Masculin", "Féminin", "Mixte"] , prompt: 'Sélectionner'%>
 
+    <%= f.input :photo, as: :file %>
+
     <%= f.button :submit, class: "btn btn-ghost" %>
 <% end %>
 </div>

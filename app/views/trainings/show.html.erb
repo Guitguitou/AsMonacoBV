@@ -5,6 +5,7 @@
 <br>
 <%=  @training.group %>
 <br>
+<%= cl_image_tag @training.photo.key, height: 300, width: 400 %>
 
 
  <% if !current_user.trainings.where(id: @training).any?  %>
