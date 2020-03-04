@@ -1,12 +1,34 @@
 <section id="index-trainings">
   <div class="container">
 
-  <% @trainings.each do |training| %>
-    <% if training.group? %>
-      <h2><%= training.group %></h2>
+    <%= week_calendar events: @trainings do |date, trainings| %>
+    <%= date %>
+
+
+
+      <% trainings.each do |training| %>
+        <% if training.start_time.day == date.day &&  %>
+          <br>
+          <%= link_to training_path(training) do %>
+            <div class="card-product Group-<%= training.group.class_for_group %>">
+              <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+              <div class='card-product-infos'>
+                <%= training.name %>
+                <%= training.start_time.strftime('%H:%M') %>
+                <%= training.end_time.strftime('%H:%M') %>
+                <%= training.group.groupe_type %>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+
+        <br>
+      <% end %>
     <% end %>
-  <% end %>
   </div>
+
+
+
 
   <%= link_to "Créer un entrainement", new_training_path %>
 </section>

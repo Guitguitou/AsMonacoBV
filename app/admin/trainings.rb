@@ -5,14 +5,16 @@ ActiveAdmin.register Training do
   #
   # Uncomment all parameters which should be permitted for assignment
   #
-  permit_params :name, :start_date, :end_date, :group
+  permit_params :name, :start_time, :end_date, :group_id
   #
   # or
   #
   # permit_params do
-  #   permitted = [:name, :start_date, :end_date, :group]
+  #   permitted = [:name, :start_time, :end_date, :group_id]
   #   permitted << :other if params[:action] == 'create' && current_user.admin?
   #   permitted
   # end
+
+
 
 end

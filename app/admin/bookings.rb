@@ -5,7 +5,7 @@ ActiveAdmin.register Booking do
   #
   # Uncomment all parameters which should be permitted for assignment
   #
-  # permit_params :training_id, :user_id, :status
+  permit_params :training_id, :user_id, :status
   #
   # or
   #
@@ -14,5 +14,5 @@ ActiveAdmin.register Booking do
   #   permitted << :other if params[:action] == 'create' && current_user.admin?
   #   permitted
   # end
-  
+
 end
