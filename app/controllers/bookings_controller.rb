@@ -28,14 +28,11 @@ class BookingsController < ApplicationController
   end
 
   def destroy
-
+    # @training = Training.find(params[:training_id])
     @booking = Booking.find(params[:id])
-    @training = Training.find(params[:training_id])
-    if @booking.destroy
-      redirect_to training_path(@training)
-    else
-      render :show
-    end
+    @booking.destroy
+    redirect_to trainings_path
+
   end
 
   private
