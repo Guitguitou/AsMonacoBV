@@ -2,16 +2,16 @@
 <div class="container">
 <%= simple_form_for @training do |f|  %>
     <%= f.input :name, label: "Nom du créneau", placeholder: 'Entrainement ou Jeu libre ou tournoi' %>
-    <%= f.input :start_date, label: "Date de début du créneau" %>
-    <%= f.input :end_date, label: "Date de fin du créneau" %>
-<br>
-    <%= f.label :group, value: "Groupe" %>
-    <%= f.select :group, ["Elite", "Groupe 1", "Groupe 2", "Groupe 3", "Groupe 4", "Groupe 5", "Coupe de France", "M20", "M17", "M15", "M13", "Baby-volley"], placeholder: 'Groupe' %>
+    <%= f.input :start_time, label: "Date de début du créneau" %>
+    <%= f.input :end_time, label: "Date de fin du créneau" %>
 <br>
     <%= f.label :sex, value: "Sexe" %>
     <%= f.select :sex, ["Masculin", "Féminin", "Mixte"] , prompt: 'Sélectionner'%>
-
-    <%= f.input :photo, as: :file %>
+<br>
+    <%= f.label :group, value: "Groupe" %>
+    <%= f.association :group, collection: @groups, label_method: :groupe_type, value_method: :id, placeholder: 'Groupe' %>
+<br>
+    <%= f.input :recurring %>
 
     <%= f.button :submit, class: "btn btn-ghost" %>
 <% end %>

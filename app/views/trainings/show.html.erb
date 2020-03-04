@@ -1,11 +1,10 @@
 <div class="container text-center">
 <%=  @training.name %>
 <br>
-<%=  @training.start_date.strftime("%I:%M") %> - <%=  @training.end_date.strftime("%I:%M") %>
+<%=  @training.start_time.strftime("%I:%M") %> - <%=  @training.end_time.strftime("%I:%M") %>
 <br>
 <%=  @training.group %>
 <br>
-<%= cl_image_tag @training.photo.key, height: 300, width: 400 %>
 
 
  <% if !current_user.trainings.where(id: @training).any?  %>

@@ -4,7 +4,6 @@ class CreateTrainings < ActiveRecord::Migration[6.0]
       t.string :name
       t.datetime :start_date
       t.datetime :end_date
-      t.string :group
 
       t.timestamps
     end
