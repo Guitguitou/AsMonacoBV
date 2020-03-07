@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 p "Create an admin"
-AdminUser.create!(email: 'guitou@gmail.com', password: 'admin10', password_confirmation: 'admin10')
+# AdminUser.create!(email: 'guitou@gmail.com', password: 'admin10', password_confirmation: 'admin10')
 Training.destroy_all
 Group.destroy_all
 p "Create groups"
@@ -29,8 +29,9 @@ p "#"
 m13 = Group.create!(groupe_type: "M13")
 p "#"
 baby = Group.create!(groupe_type: "Baby-volley")
-libre = Group.create!(groupe_type: "Libre")
-baby = Group.create!(groupe_type: "Tournoi")
+p "#"
+groupless = Group.create!(groupe_type: "Groupless")
 p 'Done dude !'
+
 
 
