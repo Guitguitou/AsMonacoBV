@@ -1,0 +1,14 @@
+.title-background{
+  font-weight: 800;
+  color: transparent;
+  font-size:70px;
+  background: url("stripes-pattern.jpg") repeat;
+  background-position: 40% 50%;
+  background-size: cover;
+  -webkit-background-clip: text;
+  position:relative;
+  text-align:center;
+  line-height:90px;
+  letter-spacing: -2px;
+  -webkit-text-stroke: 2px yellow;
+}
